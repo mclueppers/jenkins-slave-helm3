@@ -39,4 +39,5 @@ RUN apk add --no-cache \
         pip3 install yamllint=="${YAMLLINT_VERSION}";
 
 USER jenkins
-RUN helm plugin install https://github.com/chartmuseum/helm-push
+RUN helm plugin install https://github.com/chartmuseum/helm-push \
+    && helm plugin install --version master https://github.com/sonatype-nexus-community/helm-nexus-push.git
