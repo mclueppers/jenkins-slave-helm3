@@ -36,7 +36,7 @@ RUN apk add --no-cache \
         ; \
         rm helm3.tgz; \
         helm version; \
-        helm plugin install https://github.com/chartmuseum/helm-push; \
         pip3 install yamllint=="${YAMLLINT_VERSION}";
 
 USER jenkins
+RUN helm plugin install https://github.com/chartmuseum/helm-push
