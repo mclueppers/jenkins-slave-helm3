@@ -41,3 +41,4 @@ RUN apk add --no-cache \
 USER jenkins
 RUN helm plugin install https://github.com/chartmuseum/helm-push \
     && helm plugin install --version master https://github.com/sonatype-nexus-community/helm-nexus-push.git
+
